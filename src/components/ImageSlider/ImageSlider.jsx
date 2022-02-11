@@ -16,7 +16,7 @@ const ImageSlider = () => {
         <img src="/images/slider-badging.jpg" alt="slider-img" />
       </Wrap>
       <Wrap>
-        <img src="/images/slider-badging.jpg" alt="slider-img" />
+        <img src="/images/slider-badag.jpg" alt="slider-img" />
       </Wrap>
     </Carousel>
   );
