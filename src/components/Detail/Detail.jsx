@@ -1,12 +1,14 @@
 import React from "react";
 import {
-  Container,
+  SubTitle,
   Controls,
-  Background,
   ImgTitle,
-  PlayButton,
-  TrailerButton,
+  Container,
   AddButton,
+  Background,
+  PlayButton,
+  Description,
+  TrailerButton,
   GroupWatchButton,
 } from "./style";
 
@@ -35,6 +37,10 @@ const style = () => {
           <img src="/images/group-icon.png" />
         </GroupWatchButton>
       </Controls>
+      <SubTitle>2018 : 7m : Family, Fantasy, Kids, Animation</SubTitle>
+      <Description>
+        A Chinese mom who's sad when her grown son leave's.
+      </Description>
     </Container>
   );
 };
