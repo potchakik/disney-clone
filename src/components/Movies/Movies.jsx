@@ -5,23 +5,18 @@ import { useSelector } from "react-redux";
 
 const Movies = () => {
   const movies = useSelector(selectMovies);
-  console.log("This is movies", movies);
   return (
     <Container>
       <h4>Recommended for You</h4>
       <Content>
-        <Wrap>
-          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.bHpudLwNaTJB-Rs0MElZnwHaK-%26pid%3DApi&f=1" />
-        </Wrap>
-        <Wrap>
-          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.bHpudLwNaTJB-Rs0MElZnwHaK-%26pid%3DApi&f=1" />
-        </Wrap>
-        <Wrap>
-          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.bHpudLwNaTJB-Rs0MElZnwHaK-%26pid%3DApi&f=1" />
-        </Wrap>
-        <Wrap>
-          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.bHpudLwNaTJB-Rs0MElZnwHaK-%26pid%3DApi&f=1" />
-        </Wrap>
+        {movies &&
+          movies.map((movie) => {
+            return (
+              <Wrap key={movie.id}>
+                <img src={movie.cardImg} alt="card" />
+              </Wrap>
+            );
+          })}
       </Content>
     </Container>
   );
