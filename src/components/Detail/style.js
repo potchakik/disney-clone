@@ -98,7 +98,18 @@ const Description = styled.div`
   color: rgb(249, 249, 249);
   max-width: 760px;
 `;
-
+const ImageTitle = styled.div`
+  height: 30vh;
+  min-height: 175px;
+  min-width: 200px;
+  width: 30vw;
+  margin-top: 60px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+`;
 export {
   ImgTitle,
   Controls,
@@ -107,6 +118,7 @@ export {
   AddButton,
   Background,
   PlayButton,
+  ImageTitle,
   Description,
   TrailerButton,
   GroupWatchButton,
