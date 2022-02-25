@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   getAuth,
   signInWithPopup,
@@ -45,6 +45,20 @@ const Header = () => {
     });
   };
 
+  useEffect(() => {
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        dispatch(
+          setUserLogin({
+            name: user.displayName,
+            emal: user.email,
+            photo: user.photoURL,
+          })
+        );
+        navigate("/");
+      }
+    });
+  }, []);
   return (
     <Nav>
       <Logo src="/images/logo.svg" />
